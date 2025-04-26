@@ -1,20 +1,3 @@
---[[
-
-	                                            $$\ $$\   $$\     $$\       
-	                                            $$ |\__|  $$ |    $$ |      
-	$$$$$$\$$$$\   $$$$$$\  $$$$$$$\   $$$$$$\  $$ |$$\ $$$$$$\   $$$$$$$\  
-	$$  _$$  _$$\ $$  __$$\ $$  __$$\ $$  __$$\ $$ |$$ |\_$$  _|  $$  __$$\ 
-	$$ / $$ / $$ |$$ /  $$ |$$ |  $$ |$$ /  $$ |$$ |$$ |  $$ |    $$ |  $$ |
-	$$ | $$ | $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |$$ |  $$ |$$\ $$ |  $$ |
-	$$ | $$ | $$ |\$$$$$$  |$$ |  $$ |\$$$$$$  |$$ |$$ |  \$$$$  |$$ |  $$ |
-	\__| \__| \__| \______/ \__|  \__| \______/ \__|\__|   \____/ \__|  \__|
-	                                                                        
-	- Made by wis_h (837050650537099346)
-	- https://discord.gg/uilibrary
-
---]]
-
---[[ LIBRARY DATA ]]-------------------------------------------------
 local Library = { 
 	Flags = {}, 
 	Selected = {},
@@ -22,12 +5,12 @@ local Library = {
 	Connections = {},
 	Theme = {
 		Font = nil;
-		Accent = Color3.fromRGB(170, 85, 235),
+		Accent = Color3.fromRGB(255, 105, 105),
 		Background = Color3.fromRGB(15, 15, 15),
 		Foreground = Color3.fromRGB(13, 13, 13),
 
 		Text = {
-			Selected = Color3.fromRGB(170, 85, 235),
+			Selected = Color3.fromRGB(255, 105, 105),
 			Unselected = Color3.fromRGB(160, 160, 160)
 		},
 
@@ -204,8 +187,8 @@ function Library.MakeResizable(frame, minSize)
 	minSize = minSize or Vector2.new(50, 50)
 
 	local resizeHandle = Instance.new("TextButton")
-	resizeHandle.Size = UDim2.new(0, 10, 0, 10)
-	resizeHandle.Position = UDim2.new(1, -10, 1, -10)
+	resizeHandle.Size = (0, 10, 0, 10)
+	resizeHandle.Position = (1, -10, 1, -10)
 	resizeHandle.BackgroundTransparency = 1
 	resizeHandle.Text = ""
 	resizeHandle.Name = "handle"
@@ -235,7 +218,7 @@ function Library.MakeResizable(frame, minSize)
 			newWidth = math.max(minSize.X, newWidth)
 			newHeight = math.max(minSize.Y, newHeight)
 
-			frame.Size = UDim2.new(0, newWidth, 0, newHeight)
+			frame.Size = (0, newWidth, 0, newHeight)
 		end
 	end))
 
@@ -292,7 +275,7 @@ local TabViewer = Container.Viewer
 function Library:Window(...)
 	local Window, Data = {}, {
 		Title = "test",
-		Size = UDim2.new(0,480,0,580),
+		Size = UDim2.new(0,550,0,350),
 		Position = UDim2.new(0.5,0,0.5,0),
 		Anchor = Vector2.new(0,0),
 	}; local cfg = Library.Overwrite(Data, ... or {})
